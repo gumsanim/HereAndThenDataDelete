@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>데이터 삭제 요청 | Here And Then</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background-color: #f9f9f7; color: #1a1a1a; line-height: 1.8; }
+    header { background: #fff; border-bottom: 1px solid #e8e8e4; padding: 24px 0; text-align: center; }
+    header h1 { font-size: 22px; font-weight: 700; }
+    header p { font-size: 13px; color: #888; margin-top: 4px; }
+    .lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 32px auto 0; max-width: 600px; padding: 0 24px; }
+    .lang-tab { padding: 8px 20px; border-radius: 20px; border: 1px solid #ddd; background: #fff; font-size: 14px; cursor: pointer; color: #555; }
+    .lang-tab.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+    .content { max-width: 600px; margin: 32px auto 80px; padding: 0 24px; }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+    .card { background: #fff; border: 1px solid #e8e8e4; border-radius: 16px; padding: 28px; margin-bottom: 16px; }
+    .card h2 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+    .card p { font-size: 15px; color: #555; margin-bottom: 10px; }
+    .card p:last-child { margin-bottom: 0; }
+    .step-list { list-style: none; padding: 0; margin-top: 12px; }
+    .step-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: #444; padding: 8px 0; border-bottom: 1px solid #f0f0ec; }
+    .step-list li:last-child { border-bottom: none; }
+    .step-num { min-width: 24px; height: 24px; border-radius: 50%; background: #1a1a1a; color: #fff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+    .divider { text-align: center; font-size: 13px; color: #aaa; margin: 20px 0; }
+    .email-btn { display: block; text-align: center; background: #1a1a1a; color: #fff; text-decoration: none; padding: 14px 20px; border-radius: 12px; font-size: 15px; font-weight: 600; margin-top: 16px; }
+    .notice { background: #fff8f0; border: 1px solid #f0dfc8; border-radius: 12px; padding: 16px 20px; margin-bottom: 16px; }
+    .notice p { font-size: 14px; color: #7a5c3a; margin: 0; }
+    footer { text-align: center; padding: 32px 24px; font-size: 13px; color: #aaa; border-top: 1px solid #e8e8e4; }
+    footer a { color: #4a7cf7; text-decoration: none; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Here And Then</h1>
+  <p>데이터 삭제 요청 · Data Deletion Request</p>
+</header>
+<div class="lang-tabs">
+  <button class="lang-tab active" onclick="switchLang('ko',this)">한국어</button>
+  <button class="lang-tab" onclick="switchLang('en',this)">English</button>
+</div>
+<div class="content">
+
+  <div class="lang-section active" id="section-ko">
+    <div class="card">
+      <h2>앱에서 직접 삭제하기 (권장)</h2>
+      <p>앱이 설치되어 있다면 아래 순서로 계정과 모든 데이터를 즉시 삭제할 수 있습니다.</p>
+      <ul class="step-list">
+        <li><span class="step-num">1</span> 앱 실행 후 하단 탭에서 <strong>프로필</strong> 선택</li>
+        <li><span class="step-num">2</span> 화면 하단의 <strong>회원 탈퇴</strong> 버튼 탭</li>
+        <li><span class="step-num">3</span> 안내 메시지 확인 후 <strong>'회원 탈퇴'</strong> 텍스트 입력</li>
+        <li><span class="step-num">4</span> 확인 버튼을 누르면 즉시 탈퇴 처리됩니다</li>
+      </ul>
+    </div>
+    <div class="notice">
+      <p>삭제되는 데이터: 프로필 정보, 작성한 모든 일기, 그룹 데이터, 업로드한 사진 및 동영상. 삭제된 데이터는 복구할 수 없습니다.</p>
+    </div>
+    <div class="divider">── 앱을 사용할 수 없는 경우 ──</div>
+    <div class="card">
+      <h2>이메일로 삭제 요청하기</h2>
+      <p>앱에 접근할 수 없는 경우 아래 이메일로 삭제를 요청해 주세요.</p>
+      <p>요청 시 <strong>가입에 사용한 Google 이메일 주소</strong>를 함께 보내주시면 빠르게 처리됩니다.</p>
+      <p>처리 기간: 요청 수신 후 <strong>영업일 기준 7일 이내</strong></p>
+      <a class="email-btn" href="mailto:gumsanim1993@gmail.com?subject=데이터 삭제 요청&body=안녕하세요.%0A%0A아래 계정의 데이터 삭제를 요청드립니다.%0A%0A가입 이메일: %0A%0A감사합니다.">이메일로 삭제 요청 보내기</a>
+    </div>
+  </div>
+
+  <div class="lang-section" id="section-en">
+    <div class="card">
+      <h2>Delete Directly in the App (Recommended)</h2>
+      <p>If you have the app installed, you can immediately delete your account and all data by following these steps.</p>
+      <ul class="step-list">
+        <li><span class="step-num">1</span> Open the app and tap <strong>Profile</strong> in the bottom tab bar</li>
+        <li><span class="step-num">2</span> Tap <strong>Delete Account</strong> at the bottom of the screen</li>
+        <li><span class="step-num">3</span> Type <strong>'Delete Account'</strong> in the confirmation field</li>
+        <li><span class="step-num">4</span> Tap confirm — your account is deleted immediately</li>
+      </ul>
+    </div>
+    <div class="notice">
+      <p>Data deleted: profile information, all diary entries, group data, uploaded photos and videos. This cannot be recovered.</p>
+    </div>
+    <div class="divider">── If you cannot access the app ──</div>
+    <div class="card">
+      <h2>Request Deletion by Email</h2>
+      <p>If you're unable to access the app, email us to request data deletion.</p>
+      <p>Please include the <strong>Google email address</strong> you used to sign up. We'll process your request within <strong>7 business days</strong>.</p>
+      <a class="email-btn" href="mailto:gumsanim1993@gmail.com?subject=Data Deletion Request&body=Hello,%0A%0AI would like to request deletion of my account and all associated data.%0A%0ARegistered email: %0A%0AThank you.">Send Data Deletion Request</a>
+    </div>
+  </div>
+
+</div>
+<footer>
+  &copy; 2026 Here And Then &nbsp;·&nbsp;
+  <a href="privacy-policy.html">개인정보처리방침 · Privacy Policy</a>
+</footer>
+<script>
+  function switchLang(lang, btn) {
+    document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('section-' + lang).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
+</body>
+</html>
